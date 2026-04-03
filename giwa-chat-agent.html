@@ -212,7 +212,7 @@
 
 
     <div class="input-area">
-      <textarea id="user-input" placeholder="Escribí tu consulta..." rows="1"></textarea>
+      <textarea id="user-input" placeholder="Escribí tu consulta..." rows="1" tabindex="0"></textarea>
       <button id="send-btn" title="Enviar">
         <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <line x1="22" y1="2" x2="11" y2="13"></line>
@@ -248,6 +248,12 @@ const sendBtn  = document.getElementById('send-btn');
 const sugg     = document.getElementById('suggestions');
 
 // Saludo inicial al cargar
+
+// Fix foco en iframe
+document.addEventListener('click', () => { input.focus(); });
+document.addEventListener('touchstart', () => { input.focus(); });
+window.addEventListener('focus', () => { input.focus(); });
+
 window.addEventListener('load', () => {
   addBotMessage('¡Hola! Soy el agente de consultas de GIWA {IA}. ¿En qué puedo ayudarte hoy?');
 });
