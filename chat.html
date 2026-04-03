@@ -192,8 +192,7 @@ function typewriterMessage(text) {
 }
 function scroll() { msgBox.scrollTop = msgBox.scrollHeight; }
 function esc(str) {
-  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/
-/g,'<br>');
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
 }
 </script>
 </body>
