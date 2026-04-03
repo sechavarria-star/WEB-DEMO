@@ -97,7 +97,7 @@ html,body{background:transparent!important;font-family:"DM Sans",sans-serif;over
 
 <script>
 var WEBHOOK_URL = 'https://giwa-ia.app.n8n.cloud/webhook/giwa-chat';
-var ELEPHANT_SRC =  + elephant + ;
+var ELEPHANT_SRC = document.querySelector(".header-avatar img").src;
 var sessionId = 'sess_' + Math.random().toString(36).slice(2, 10);
 var isOpen = true;
 var isWaiting = false;
